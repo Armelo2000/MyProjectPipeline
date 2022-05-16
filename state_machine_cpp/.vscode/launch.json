@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+  {
+    "name": "(gdb) Anfügen",
+    "type": "cppdbg",
+    "request": "attach",
+    "program": "${workspaceFolder}/myapp",
+    "processId": "${command:pickProcess}",
+    "MIMode": "gdb",
+    "miDebuggerPath": "/path/to/gdb",
+    "setupCommands": [
+        {
+            "description": "Automatische Strukturierung und Einrückung für \"gdb\" aktivieren",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        },
+        {
+            "description":  "Disassemblierungsvariante auf Intel festlegen",
+            "text": "-gdb-set disassembly-flavor intel",
+            "ignoreFailures": true
+        }
+    ]
+  },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "c:/Users/Neu/Documents/state_machine_cpp",
+      "environment": [],
+      "program": "c:/Users/Neu/Documents/state_machine_cpp/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      //"console": "integratedTerminal",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
