@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: configure
-      run: ./configure
+    - name: myapp
+      run: ./myapp
       
     - name: Install dependencies
       run: make
